@@ -69,9 +69,45 @@
     <!-- End Google Site Tag -->
 
 
+    <!-- Google Tag Manager -->
+    <!--script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-57BP4HT');
+    </script>
+    <!-- End Google Tag Manager -->
+
+
+    <!-- Custom code for tracking clicks -->
+    <script>
+    function onSubmit() {
+
+        //alert("clicked!");
+        gtag('event', 'sign_up', {
+            // Event parameters
+            'Category': 'Experiments',
+            'Action': 'register_to_newsletter',
+            'Label': '',
+            'Value': '1'
+            // ...
+
+        });
+
+    }
+    </script>
+
+
 </head>
 
 <body class="index">
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <!--noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57BP4HT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     
     
     <!-- Styleswitcher
@@ -189,6 +225,8 @@
                         </div>
                     </div>
                 </div>
+
+                
                 <!--/ Carousel item end -->
                 
                 <!--div class="item">
@@ -224,6 +262,8 @@
     
     <!-- Start Feature Section -->
         <section id="solutions" class="feature-section">
+            <button  class="btn btn-primary" onclick="onSubmit()">Click and Track Me</button>
+                
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-6 col-xs-12">
