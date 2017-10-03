@@ -68,10 +68,7 @@
     </script>
     <!-- End Google Site Tag -->
 
-    <script>
-        setActiveStyleSheet('light-blue');
-    </script>
-        
+       
 </head>
 
 <body class="index">
@@ -232,26 +229,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Interested to hear more? Want to join our free alpha?</br>Register here!</h1>
+                    <h1>Interested to hear more? Want to join our free alpha? Register here!</h1>
                 </div>
             </div>
         </div>
 
         <div id="contact">
         <form name="sentMessage" id="contactForm" novalidate>  
-            <div class="row">
-                <div>
-                    <div class=" ">
-                        <input type="email" class="form-control"  style="width:220px" placeholder="Your Email *" name="email" id="email" required data-validation-required-message="Please enter your email address.">
-                        <p class="help-block text-danger"></p>
-                    </div>
+                <div class="row clearfix">
+                        <div>
+                            <p class="help-block text-danger"></p>                            
+                            <input type="email" class="form-control"  style="width:220px" placeholder="Your Email *" name="email" id="email" required data-validation-required-message="Please enter your email address.">
+                            <p></p>
+                        </div>
+                        <div class="col-lg-12 text-center">
+                            <div id="success"></div>
+                            <button type="submit" id="send-only-email" class="btn btn-primary">Sign Up</button>
+                        </div>
                 </div>
-                <div class="clearfix"></div>
-                <div class="col-lg-12 text-center">
-                    <div id="success"></div>
-                    <button type="submit" id="send-only-email" class="btn btn-primary">Sign Up</button>
-                </div>
-            </div>
         </form>
         </div>
 
@@ -333,7 +328,9 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/script.js"></script>
-
+    <script>
+            setActiveStyleSheet('light-blue');
+    </script>
 </body>
 
 </html>

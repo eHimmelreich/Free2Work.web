@@ -11,7 +11,7 @@ $(function() {
             var id = $(event.target).find(':submit').attr("id");
 
             var email = $("input#email").val();
-            var name, phone, message, firstname;
+            var name, phone, message, firstName="";
             if (id == "send-detailed-message") {
                 name = $("input#name").val();
                 phone = $("input#phone").val();
