@@ -8,15 +8,27 @@ $(function() {
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
-            var name = $("input#name").val();
+            var id = $(event.target).find(':submit').attr("id");
+
             var email = $("input#email").val();
-            var phone = $("input#phone").val();
-            var message = $("textarea#message").val();
-            var firstName = name; // For Success/Failure Message
-            // Check for white space in name for Success/Fail message
-            if (firstName.indexOf(' ') >= 0) {
-                firstName = name.split(' ').slice(0, -1).join(' ');
+            var name, phone, message, firstname;
+            if (id == "send-detailed-message") {
+                name = $("input#name").val();
+                phone = $("input#phone").val();
+                message = $("textarea#message").val();
+                firstName = name; // For Success/Failure Message
+                // Check for white space in name for Success/Fail message
+                if (firstName.indexOf(' ') >= 0) {
+                    firstName = name.split(' ').slice(0, -1).join(' ');
+                }
             }
+
+            // Track sign up event in google analytics!!
+            if (id == "send-detailed-message")
+                gtag('event', 'generate_lead', {}); /// generate-lead is a full message
+            else //quick resigntration
+                gtag('event', 'sign_up', {}); //sign-up is a sinmple sign-up
+
             $.ajax({
                 //url: "https://formspree.io/admin@free2.work",
                 url: "https://formspree.io/free2work2017@gmail.com",
