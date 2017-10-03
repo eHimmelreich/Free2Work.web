@@ -477,7 +477,7 @@ li {
 /*-- Main slide --*/
 
 #main-slide .item {
-    height: 400px;
+    height: 280px;  /* carousel height */
 }
 
 #main-slide .item img{
@@ -502,7 +502,7 @@ li {
 }
 
 #main-slide .slider-content{
-	top: 40%;
+	top: 45%;
 	margin-top: -70px;
 	left: 0;
 	padding: 0;
@@ -748,7 +748,7 @@ li {
 }
 
 .feature, .feature-2, .feature-3 {
-    padding-bottom: 80px;
+    padding-bottom: 20px;
 }
 
 .feature, .feature-3 {
