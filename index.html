@@ -36,10 +36,10 @@
     
     
     <!-- Colors CSS -->
+    <link rel="stylesheet" type="text/css" href="css/color/light-blue.css" title="light-blue">
     <link rel="stylesheet" type="text/css" href="css/color/green.css" title="green">
     <link rel="stylesheet" type="text/css" href="css/color/light-red.css" title="light-red">
     <link rel="stylesheet" type="text/css" href="css/color/blue.css" title="blue">
-    <link rel="stylesheet" type="text/css" href="css/color/light-blue.css" title="light-blue">
     <link rel="stylesheet" type="text/css" href="css/color/yellow.css" title="yellow">
     <link rel="stylesheet" type="text/css" href="css/color/light-green.css" title="light-green">
 
@@ -76,28 +76,12 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-57BP4HT');
-    </script>
+    </script-->
     <!-- End Google Tag Manager -->
 
-
-    <!-- Custom code for tracking clicks -->
     <script>
-    function onSubmit() {
-
-        //alert("clicked!");
-        gtag('event', 'sign_up', {
-            // Event parameters
-            'Category': 'Experiments',
-            'Action': 'register_to_newsletter',
-            'Label': '',
-            'Value': '1'
-            // ...
-
-        });
-
-    }
+    setActiveStyleSheet('light-blue');
     </script>
-
 
 </head>
 
@@ -110,9 +94,8 @@
     <!-- End Google Tag Manager (noscript) -->
     
     
-    <!-- Styleswitcher
-================================================== -->
-        <div class="colors-switcher">
+    <!-- Styleswitcher -->
+        <!--div class="colors-switcher">
             <a id="show-panel" class="hide-panel"><i class="fa fa-tint"></i></a>        
                 <ul class="colors-list">
                     <li><a title="Light Red" onClick="setActiveStyleSheet('light-red'); return false;" class="light-red"></a></li>
@@ -126,8 +109,7 @@
                 </ul>
 
         </div>  
-<!-- Styleswitcher End
-================================================== -->
+    <!-- Styleswitcher End -->
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -174,11 +156,13 @@
         <div id="main-slide" class="carousel slide" data-ride="carousel">
 
             <!-- Indicators -->
+            <!--
             <ol class="carousel-indicators">
                 <li data-target="#main-slide" data-slide-to="0" class="active"></li>
                 <li data-target="#main-slide" data-slide-to="1"></li>
-                <!--li data-target="#main-slide" data-slide-to="2"></li-->
+                <li data-target="#main-slide" data-slide-to="2"></li>
             </ol>
+            -->
             <!--/ Indicators end-->
 
             <!-- Carousel inner -->
@@ -197,6 +181,7 @@
                 </div>
                 <!--/ Carousel item end -->
                 
+                <!--
                 <div class="item">
                     <img class="img-responsive" src="images/header-back.png" alt="slider">
                     
@@ -210,7 +195,7 @@
                         </div>
                     </div>
                 </div>
-
+                -->
                 
                 <!--/ Carousel item end -->
                 
@@ -232,12 +217,14 @@
             <!-- Carousel inner end-->
 
             <!-- Controls -->
+            <!--
             <a class="left carousel-control" href="#main-slide" data-slide="prev">
                 <span><i class="fa fa-angle-left"></i></span>
             </a>
             <a class="right carousel-control" href="#main-slide" data-slide="next">
                 <span><i class="fa fa-angle-right"></i></span>
             </a>
+        -->
         </div>
         <!-- /carousel -->
     </section>
@@ -254,7 +241,7 @@
                             <i class="fa fa-magic"></i>
                             <div class="feature-content">
                                 <h4>Team Insights</h4>
-                                <p>Fre2Work Labs is gains deep insights on the way people work together, and provide ongoing tips to the people - before meetings</p>
+                                <p>Free2Work Labs gains deep insights on the way people work together, and provide ongoing tips to the people - before meetings</p>
                             </div>
                         </div>
                     </div><!-- /.col-md-3 -->
@@ -280,7 +267,7 @@
                         <div class="feature">
                             <i class="fa fa-plug"></i>
                             <div class="feature-content">
-                                <h4>Cultivating</h4>
+                                <h4>Team Cultivating</h4>
                                 <p>Free2Work Labs maintains your team's productivity and happiness</p>
                             </div>
                         </div>
