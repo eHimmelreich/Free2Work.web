@@ -69,20 +69,29 @@
     </script>
     <!-- End Google Site Tag -->
 
-       
 </head>
 
-<body class="index">
+<body class="index" id="body">
+
 
     <!-- Block non US clients -->
     <script type="application/javascript">
         function getIP(json) {
-          console.log("My geolocation is: ", JSON.stringify(json)); //json.ip
+          var country = json.country;
+          var IP_segment = json.ip;
+
+          console.log(JSON.stringify(json)); //TODO: enable proxy access
+          if (country !== "US" ){
+            var elem = document.getElementById("body");
+            elem.parentElement.removeChild(elem);
+          }
         }
       </script>
       <script type="application/javascript" src="https://ipinfo.io/?format=jsonp&callback=getIP"></script>
 
-      <!-- Navigation -->
+
+
+    <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
