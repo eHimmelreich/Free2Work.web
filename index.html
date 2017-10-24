@@ -77,11 +77,13 @@
     <!-- Block non US clients -->
     <script type="application/javascript">
         function getIP(json) {
-          var country = json.country;
-          var IP_segment = json.ip;
-
           console.log(JSON.stringify(json)); //TODO: enable proxy access
-          if (country !== "US" ){
+
+          var country = json.country;
+          //var IP_segment = json.ip;
+
+          var WhiteList = ["IL", "US"];
+          if (!WhiteList.includes(country)){
             var elem = document.getElementById("body");
             elem.parentElement.removeChild(elem);
           }
